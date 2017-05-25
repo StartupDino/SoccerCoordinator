@@ -58,10 +58,34 @@ for player in players {
     }
 }
 
+// adding experienced players to teams
 
+
+var sortCount = 0
+
+for player in hasExperience {
+    sortCount += 1
+    var remainder = sortCount % 3
+    
+    switch remainder {
+    case 0:
+        teamSharks.append(player)
+    case 1:
+        teamDragons.append(player)
+    case 2:
+        teamRaptors.append(player)
+    default:
+        print("no")
+    }
+    
+}
 
 print(hasExperience)
-print(noExperience)
+print("then...")
+print(teamSharks)
+print(teamDragons)
+print(teamRaptors)
+
 
 
 // TODO -> players are divided, now sort them into 3 equal teams
