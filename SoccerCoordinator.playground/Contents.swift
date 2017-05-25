@@ -1,8 +1,63 @@
-//: Playground - noun: a place where people can play
+// The players - each player is a dictionary!
 
-import UIKit
+let playerOne: [String: Any] = ["name": "Joe Smith","height": 42, "experience": true, "guardian": "Jim and Jan Smith" ]
+let playerTwo: [String: Any] = ["name": "Jill Tanner","height": 36, "experience": true, "guardian": "Clara Tanner" ]
+let playerThree: [String: Any] = ["name": "Bill Bon","height": 43, "experience": true, "guardian": "Sara and Jenny Bon" ]
+let playerFour: [String: Any] = ["name": "Eva Gordon","height": 45, "experience": false, "guardian": "Wendy and Mike Gordon" ]
+let playerFive: [String: Any] = ["name": "Matt Gill","height": 40, "experience": false, "guardian": "Charles and Sylvia Gill" ]
+let playerSix: [String: Any] = ["name": "Kimmy Stein","height": 41, "experience": false, "guardian": "Bill and Hillary Stein" ]
+let playerSeven: [String: Any] = ["name": "Sammy Adams","height": 45, "experience": false, "guardian": "Jeff Adams" ]
+let playerEight: [String: Any] = ["name": "Karl Saygan","height": 42, "experience": true, "guardian": "Heather Bledsoe" ]
+let playerNine: [String: Any] = ["name": "Suzanne Greenberg","height": 44, "experience": true, "guardian": "Henrietta Dumas" ]
+let playerTen: [String: Any] = ["name": "Sal Dali","height": 41, "experience": false, "guardian": "Gala Dali" ]
+let playerEleven: [String: Any] = ["name": "Joe Kavalier","height": 39, "experience": false, "guardian": "Sam and Elaine Kavalier" ]
+let playerTwelve: [String: Any] = ["name": "Ben Finkelstein","height": 44, "experience": false, "guardian": "Aaron and Jill Finkelstein" ]
+let playerThirteen: [String: Any] = ["name": "Diego Soto","height": 41, "experience": true, "guardian": "Robin and Sarika Soto" ]
+let playerFourteen: [String: Any] = ["name": "Chloe Alaska","height": 47, "experience": false, "guardian": "David and Jamie Alaska" ]
+let playerFifteen: [String: Any] = ["name": "Arnold Willis","height": 43, "experience": false, "guardian": "Claire Willis" ]
+let playerSixteen: [String: Any] = ["name": "Phillip Helm","height": 44, "experience": true, "guardian": "Thomas Helm and Eva Jones" ]
+let playerSeventeen: [String: Any] = ["name": "Les Clay","height": 42, "experience": true, "guardian": "Wynonna Brown" ]
+let playerEighteen: [String: Any] = ["name": "Herschel Krustofski","height": 45, "experience": true, "guardian": "Hyman and Rachel Krustofski" ]
 
-var str = "Hello, playground"
+// The 'players' array contains all player dictionaries
+
+var players = [playerOne, playerTwo, playerThree, playerFour, playerFive, playerSix, playerSeven, playerEight, playerNine, playerTen, playerEleven, playerTwelve, playerThirteen, playerFourteen, playerFifteen, playerSixteen, playerSeventeen, playerEighteen]
+
+print("Player count = \(players.count)")
 
 
-// first comment!!
+// The teams - each team is an array
+
+var teamSharks = [String: Any]()
+var teamDragons = [String: Any]()
+var teamRaptors = [String: Any]()
+
+// Creating empty containers for players based on *experience*
+
+var hasExperience = [[String: Any]]()
+var noExperience = [[String: Any]]()
+
+players[3]["experience"]
+
+// the IF statement
+
+
+
+for player in players {
+    if (player["experience"] as! Bool) == true {
+        print(player["name"])
+        hasExperience.append(player)
+    } else {
+        noExperience.append(player)
+    }
+    
+}
+
+
+
+print(hasExperience)
+print(noExperience)
+
+
+
+// the bottom of the page
