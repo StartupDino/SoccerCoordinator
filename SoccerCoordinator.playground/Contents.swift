@@ -1,4 +1,9 @@
-// The players - each player is a dictionary!
+/*
+ ---------------- Part One -------------------
+ ---------------- The Data -------------------
+ */
+
+// The players - each is a dictionary
 
 let playerOne: [String: Any] = ["name": "Joe Smith","height": 42, "experience": true, "guardian": "Jim and Jan Smith" ]
 let playerTwo: [String: Any] = ["name": "Jill Tanner","height": 36, "experience": true, "guardian": "Clara Tanner" ]
@@ -19,29 +24,30 @@ let playerSixteen: [String: Any] = ["name": "Phillip Helm","height": 44, "experi
 let playerSeventeen: [String: Any] = ["name": "Les Clay","height": 42, "experience": true, "guardian": "Wynonna Brown" ]
 let playerEighteen: [String: Any] = ["name": "Herschel Krustofski","height": 45, "experience": true, "guardian": "Hyman and Rachel Krustofski" ]
 
-// The 'players' array contains all player dictionaries
+// The 'players' array containing all player dictionaries
 
 var players = [playerOne, playerTwo, playerThree, playerFour, playerFive, playerSix, playerSeven, playerEight, playerNine, playerTen, playerEleven, playerTwelve, playerThirteen, playerFourteen, playerFifteen, playerSixteen, playerSeventeen, playerEighteen]
 
 print("Player count = \(players.count)")
 
 
-// The teams - each team is an array
+// The teams - each is an array of dictionaries
 
-var teamSharks = [String: Any]()
-var teamDragons = [String: Any]()
-var teamRaptors = [String: Any]()
+var teamSharks = [[String: Any]]()
+var teamDragons = [[String: Any]]()
+var teamRaptors = [[String: Any]]()
+
+/*
+ ---------------- Part Two ----------------------
+ ---------------- The Sorting -------------------
+ */
 
 // Creating empty containers for players based on *experience*
 
 var hasExperience = [[String: Any]]()
 var noExperience = [[String: Any]]()
 
-players[3]["experience"]
-
-// the IF statement
-
-
+// Dividing players based on experience
 
 for player in players {
     if (player["experience"] as! Bool) == true {
@@ -50,7 +56,6 @@ for player in players {
     } else {
         noExperience.append(player)
     }
-    
 }
 
 
@@ -58,6 +63,8 @@ for player in players {
 print(hasExperience)
 print(noExperience)
 
+
+// TODO -> players are divided, now sort them into 3 equal teams
 
 
 // the bottom of the page
