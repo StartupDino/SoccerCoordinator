@@ -92,7 +92,7 @@ for player in noExperience {
     }
 }
 
-// Adding height logic
+// Average height calculation
 
 var teamSharkHeight: Int = 0
 
@@ -125,5 +125,32 @@ var teamRaptorsAverage = teamRaptorsHeight / teamRaptors.count
 
 print("Team Sharks average height is \(teamRaptorsAverage).")
 
+/*
+ ---------------- Part Three ----------------------
+ ---------------- Sending Letters -----------------
+*/
 
-// the bottom of the page
+// Creating letter container and practice date constants
+
+let sharkPracticeDate = "March 17, 3pm"
+let dragonPracticeDate = "March 17, 1pm"
+let raptorPracticeDate = "March 18, 1pm"
+
+var letters = [String]()
+
+// Creating letters per teams and adding to letters array
+
+for player in teamSharks {
+    letters.append("Chomp Chomp \(player["guardian"] as! String)! Just wanted to let you know that \(player["name"] as! String) has been placed on Team Sharks! Your first practice is on \(sharkPracticeDate) sharp. See you there chomp chomp!")
+}
+
+for player in teamDragons {
+    letters.append("Snort Snort \(player["guardian"] as! String)! Just wanted to let you know that \(player["name"] as! String) has been placed on Team Dragons! Your first practice is on \(dragonPracticeDate) sharp. See you there snort snort!")
+}
+
+for player in teamRaptors {
+    letters.append("RAWWWRR \(player["guardian"] as! String)! Just wanted to let you know that \(player["name"] as! String) has been placed on Team Raptors! Your first practice is on \(raptorPracticeDate) sharp. See you there RAWWRR...")
+}
+
+print(letters)
+
