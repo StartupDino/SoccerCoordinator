@@ -30,7 +30,6 @@ var players = [playerOne, playerTwo, playerThree, playerFour, playerFive, player
 
 print("Player count = \(players.count)")
 
-
 // The teams - each is an array of dictionaries
 
 var teamSharks = [[String: Any]]()
@@ -59,7 +58,6 @@ for player in players {
 
 // adding experienced players to teams
 
-
 var sortCount = 0
 
 for player in hasExperience {
@@ -73,8 +71,7 @@ for player in hasExperience {
         teamDragons.append(player)
     case 2:
         teamRaptors.append(player)
-    default:
-        print("no")
+    default: break
     }
 }
 
@@ -91,14 +88,42 @@ for player in noExperience {
         teamDragons.append(player)
     case 2:
         teamRaptors.append(player)
-    default:
-        print("no")
+    default: break
     }
 }
 
+// Adding height logic
+
+var teamSharkHeight: Int = 0
+
+for player in teamSharks {
+    teamSharkHeight += player["height"] as! Int
+}
+
+var teamSharkAverage = teamSharkHeight / teamSharks.count
+
+print("Team Sharks average height is \(teamSharkAverage).")
 
 
-// TODO -> players are divided, now sort them into 3 equal teams
+var teamDragonsHeight: Int = 0
+
+for player in teamDragons {
+    teamDragonsHeight += player["height"] as! Int
+}
+
+var teamDragonsAverage = teamDragonsHeight / teamDragons.count
+
+print("Team Sharks average height is \(teamDragonsAverage).")
+
+var teamRaptorsHeight: Int = 0
+
+for player in teamRaptors {
+    teamRaptorsHeight += player["height"] as! Int
+}
+
+var teamRaptorsAverage = teamRaptorsHeight / teamRaptors.count
+
+print("Team Sharks average height is \(teamRaptorsAverage).")
 
 
 // the bottom of the page
