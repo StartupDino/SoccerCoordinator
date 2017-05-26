@@ -163,5 +163,6 @@ for player in teamRaptors {
     letters.append("RAWWWRR \(player["guardian"] as! String)! Just wanted to let you know that \(player["name"] as! String) has been placed on Team Raptors! Your first practice is on \(raptorPracticeDate) sharp. See you there RAWWRR...")
 }
 
-print(letters)
-
+for letter in letters {
+    print(letter)
+}
