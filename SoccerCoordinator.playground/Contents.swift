@@ -51,7 +51,6 @@ var noExperience = [[String: Any]]()
 
 for player in players {
     if (player["experience"] as! Bool) == true {
-        print(player["name"])
         hasExperience.append(player)
     } else {
         noExperience.append(player)
@@ -77,14 +76,25 @@ for player in hasExperience {
     default:
         print("no")
     }
-    
 }
 
-print(hasExperience)
-print("then...")
-print(teamSharks)
-print(teamDragons)
-print(teamRaptors)
+var sortCountTwo = 0
+
+for player in noExperience {
+    sortCount += 1
+    var remainderTwo = sortCount % 3
+    
+    switch remainderTwo {
+    case 0:
+        teamSharks.append(player)
+    case 1:
+        teamDragons.append(player)
+    case 2:
+        teamRaptors.append(player)
+    default:
+        print("no")
+    }
+}
 
 
 
