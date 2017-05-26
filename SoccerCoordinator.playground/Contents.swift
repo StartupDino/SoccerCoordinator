@@ -75,6 +75,8 @@ for player in hasExperience {
     }
 }
 
+// adding non-experienced players to teams
+
 var sortCountTwo = 0
 
 for player in noExperience {
@@ -91,6 +93,11 @@ for player in noExperience {
     default: break
     }
 }
+
+/*
+ ---------------- Part Two-and-a-half ----------------------
+ ---------------- Calculating average team height ----------
+*/
 
 // Average height calculation
 
@@ -113,7 +120,7 @@ for player in teamDragons {
 
 var teamDragonsAverage = teamDragonsHeight / teamDragons.count
 
-print("Team Sharks average height is \(teamDragonsAverage).")
+print("Team Dragons average height is \(teamDragonsAverage).")
 
 var teamRaptorsHeight: Int = 0
 
@@ -123,7 +130,11 @@ for player in teamRaptors {
 
 var teamRaptorsAverage = teamRaptorsHeight / teamRaptors.count
 
-print("Team Sharks average height is \(teamRaptorsAverage).")
+print("Team Raptors average height is \(teamRaptorsAverage).")
+
+// Note to devs!
+// I never quite made it to calculating team resorting based on height differential
+// Maybe next time!ç
 
 /*
  ---------------- Part Three ----------------------
